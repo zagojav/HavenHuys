@@ -222,11 +222,11 @@
     "aside": {
       "title": "Other ways",
       "emailLabel": "Email",
-      "email": "hello@havenhuis.nl",
+      "email": "hello.havenhuys@gmail.com",
       "hoursLabel": "Hours",
       "hours": "Monday to Friday, 09:00–17:00 CET",
-      "warehouseLabel": "Based in",
-      "warehouse": "Rotterdam, Netherlands",
+      "warehouseLabel": "Operated from",
+      "warehouse": "Brazil, shipping to the Netherlands",
       "shippingNote": "Looking for delivery times or returns?",
       "shippingLink": "Read shipping & returns"
     },
@@ -254,7 +254,7 @@
       "title": "Returns",
       "body": "Thirty days from delivery, for any reason. The piece needs to come back in a condition you would be happy to receive it in. The original packaging helps but is not required.",
       "steps": {
-        "one": "Email hello@havenhuis.nl with your order number.",
+        "one": "Email hello.havenhuys@gmail.com with your order number.",
         "two": "We send a prepaid label within one working day.",
         "three": "Drop the parcel at any pickup point.",
         "four": "Refund lands 3–5 business days after the parcel reaches us."
@@ -328,7 +328,7 @@
     "instagram": "Instagram",
     "pinterest": "Pinterest",
     "rights": "© {year} Haven Huis. All rights reserved.",
-    "kvk": "KvK 87654321 · Rotterdam",
+    "operator": "Haven Huis is operated from Brazil, shipping to customers in the Netherlands · hello.havenhuys@gmail.com",
     "terms": "Terms",
     "privacy": "Privacy"
   },

@@ -163,7 +163,7 @@ export async function Footer() {
 
         <div className="border-bg/12 text-bg/45 mt-14 flex flex-col gap-4 border-t pt-8 text-xs sm:flex-row sm:items-center sm:justify-between">
           <p>{t('rights', { year })}</p>
-          <p className="sm:order-first">{t('kvk')}</p>
+          <p className="sm:order-first">{t('operator')}</p>
         </div>
       </div>
     </footer>

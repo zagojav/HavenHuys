@@ -222,11 +222,11 @@
     "aside": {
       "title": "Andere manieren",
       "emailLabel": "E-mail",
-      "email": "hello@havenhuis.nl",
+      "email": "hello.havenhuys@gmail.com",
       "hoursLabel": "Openingstijden",
       "hours": "Maandag tot vrijdag, 09:00–17:00 CET",
-      "warehouseLabel": "Gevestigd in",
-      "warehouse": "Rotterdam, Nederland",
+      "warehouseLabel": "Gerund vanuit",
+      "warehouse": "Brazilië, met verzending naar Nederland",
       "shippingNote": "Op zoek naar levertijden of retourvoorwaarden?",
       "shippingLink": "Lees verzending & retour"
     },
@@ -254,7 +254,7 @@
       "title": "Retourneren",
       "body": "Dertig dagen vanaf levering, om welke reden dan ook. Het stuk moet terugkomen in een staat waarin je het zelf ook zou willen ontvangen. De originele verpakking helpt, maar is niet verplicht.",
       "steps": {
-        "one": "Mail hello@havenhuis.nl met je bestelnummer.",
+        "one": "Mail hello.havenhuys@gmail.com met je bestelnummer.",
         "two": "Wij sturen binnen één werkdag een voorgefrankeerd label.",
         "three": "Lever het pakket af bij een willekeurig afhaalpunt.",
         "four": "De terugbetaling staat 3–5 werkdagen na ontvangst van het pakket op je rekening."
@@ -328,7 +328,7 @@
     "instagram": "Instagram",
     "pinterest": "Pinterest",
     "rights": "© {year} Haven Huis. Alle rechten voorbehouden.",
-    "kvk": "KvK 87654321 · Rotterdam",
+    "operator": "Haven Huis wordt vanuit Brazilië gerund en verzendt naar klanten in Nederland · hello.havenhuys@gmail.com",
     "terms": "Voorwaarden",
     "privacy": "Privacy"
   },

@@ -1,13 +1,16 @@
 import 'server-only';
 import type Stripe from 'stripe';
+import { canSendEmail, sendOperationsEmail } from '@/lib/email';
+import { buildOrderEmail } from '@/lib/order-email';
 
 /**
  * What happens after a payment succeeds.
  *
- * This shop has no database and no mail service yet, so fulfilment is a
- * structured log and two clearly marked seams: the supplier order and the
- * confirmation email. Both take the same `Order` and nothing else, so wiring
- * them up later is a function body each, not a refactor.
+ * Two things, today: the order is logged in full, and an email goes out with
+ * everything needed to place it at CJ Dropshipping by hand. Buying from the
+ * supplier automatically and confirming the order to the customer are still
+ * seams — both take the same `Order` and nothing else, so wiring them up is a
+ * function body each, not a refactor.
  */
 
 export interface OrderLine {
@@ -23,6 +26,9 @@ export interface Order {
   paymentIntentId: string | null;
   email: string | null;
   name: string | null;
+  /** Name on the delivery address, which need not be the payer's. */
+  shippingName: string | null;
+  phone: string | null;
   locale: string;
   currency: string;
   amountTotalCents: number;
@@ -63,6 +69,8 @@ export function toOrder(
         : (session.payment_intent?.id ?? null),
     email: session.customer_details?.email ?? null,
     name: session.customer_details?.name ?? null,
+    shippingName: session.collected_information?.shipping_details?.name ?? null,
+    phone: session.customer_details?.phone ?? null,
     locale: session.metadata?.locale ?? 'en',
     currency: session.currency ?? 'eur',
     amountTotalCents: session.amount_total ?? 0,
@@ -88,8 +96,36 @@ export function toOrder(
 
 export async function fulfilOrder(order: Order): Promise<void> {
   // TODO: place the order with CJ Dropshipping, one call per line.
-  // TODO: send the confirmation email once a mail service is connected.
+  // TODO: confirm the order to the customer, not just to ourselves.
   console.info('[fulfilment] paid order ready to ship', JSON.stringify(order));
+
+  await notifyOperations(order);
+}
+
+/**
+ * Sends the "go and buy this" email.
+ *
+ * Swallows every failure on purpose. The customer has already been charged,
+ * and the webhook has to be able to acknowledge the event: letting a mail
+ * outage bubble up would have Stripe retry an order that was, in every way
+ * that matters, handled — and the retry would be dropped by the replay guard
+ * anyway. The structured log line above carries everything the email would
+ * have, so a failure here costs visibility, not the order.
+ */
+async function notifyOperations(order: Order): Promise<void> {
+  if (!canSendEmail()) {
+    console.warn(
+      `[fulfilment] RESEND_API_KEY is not set, nobody was notified about ${order.sessionId}`,
+    );
+    return;
+  }
+
+  try {
+    const id = await sendOperationsEmail(buildOrderEmail(order));
+    console.info(`[fulfilment] notification ${id} sent for ${order.sessionId}`);
+  } catch (error) {
+    console.error(`[fulfilment] could not notify about ${order.sessionId}`, error);
+  }
 }
 
 export function recordFailedPayment(session: Stripe.Checkout.Session): void {
