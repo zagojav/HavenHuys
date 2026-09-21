@@ -11,9 +11,15 @@ import {
 } from 'react';
 import { useTranslations } from 'next-intl';
 import { AnimatePresence, motion } from 'motion/react';
-import { Check, Info, X } from 'lucide-react';
+import { AlertTriangle, Check, Info, X } from 'lucide-react';
 
-type Tone = 'success' | 'info';
+type Tone = 'success' | 'info' | 'error';
+
+const toneStyles: Record<Tone, string> = {
+  success: 'bg-success',
+  info: 'bg-accent',
+  error: 'bg-error',
+};
 
 interface Toast {
   id: number;
@@ -75,14 +81,10 @@ export function ToastProvider({ children }: { children: ReactNode }) {
                 aria-hidden="true"
                 className={
                   'mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full ' +
-                  (toast.tone === 'success' ? 'bg-success' : 'bg-accent')
+                  toneStyles[toast.tone]
                 }
               >
-                {toast.tone === 'success' ? (
-                  <Check className="size-3" strokeWidth={3} />
-                ) : (
-                  <Info className="size-3" strokeWidth={3} />
-                )}
+                <ToneIcon tone={toast.tone} />
               </span>
 
               <p className="flex-1 text-sm leading-snug">{toast.message}</p>
@@ -101,6 +103,12 @@ export function ToastProvider({ children }: { children: ReactNode }) {
       </div>
     </ToastContext.Provider>
   );
+}
+
+function ToneIcon({ tone }: { tone: Tone }) {
+  if (tone === 'success') return <Check className="size-3" strokeWidth={3} />;
+  if (tone === 'error') return <AlertTriangle className="size-3" strokeWidth={3} />;
+  return <Info className="size-3" strokeWidth={3} />;
 }
 
 export function useToast(): ToastContextValue {

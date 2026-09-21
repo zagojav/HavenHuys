@@ -8,7 +8,7 @@ import type { Locale } from '@/i18n/routing';
 import { useRouter } from '@/i18n/navigation';
 import { useCart } from '@/lib/store/cart';
 import { useToast } from '@/components/ui/Toast';
-import { paymentLinkFor } from '@/lib/payment-links';
+import { startCheckout } from '@/lib/checkout';
 import { Button } from '@/components/ui/Button';
 
 interface ProductPurchaseProps {
@@ -25,6 +25,7 @@ export function ProductPurchase({ product, locale }: ProductPurchaseProps) {
   const firstOption = product.variants?.options[0];
   const [variantId, setVariantId] = useState<string | undefined>(firstOption?.id);
   const [quantity, setQuantity] = useState(1);
+  const [pending, setPending] = useState(false);
 
   const selected = product.variants?.options.find((option) => option.id === variantId);
 
@@ -41,19 +42,24 @@ export function ProductPurchase({ product, locale }: ProductPurchaseProps) {
     notify(t('toast.added', { name: product.name[locale] }));
   }
 
-  function buyNow() {
-    const link = paymentLinkFor(product.slug);
+  async function buyNow() {
+    setPending(true);
 
-    if (link) {
-      window.location.href = link;
-      return;
+    try {
+      await startCheckout({
+        locale,
+        source: 'product',
+        items: [{ slug: product.slug, variantId: selected?.id, quantity }],
+      });
+    } catch {
+      // Checkout is unreachable. Keep the purchase intent rather than dropping
+      // it on the floor: the piece goes in the bag and the customer lands
+      // somewhere they can try again.
+      addToBagSilently();
+      notify(t('toast.checkoutFailed'), 'error');
+      router.push('/cart');
+      setPending(false);
     }
-
-    // No Mollie link configured for this piece yet — keep the purchase intent
-    // rather than dropping it on the floor.
-    addToBagSilently();
-    notify(t('toast.noLink'), 'info');
-    router.push('/cart');
   }
 
   function addToBagSilently() {
@@ -160,9 +166,10 @@ export function ProductPurchase({ product, locale }: ProductPurchaseProps) {
           variant="primary"
           size="lg"
           onClick={buyNow}
+          disabled={pending}
           className="flex-1 sm:flex-none"
         >
-          {t('buyNow')}
+          {pending ? t('buyingNow') : t('buyNow')}
         </Button>
 
         <Button

@@ -1,8 +1,8 @@
 # Haven Huis
 
-A storefront for a small home-decor shop selling into the Netherlands and the
-wider EU. Dropshipping model: there is no payment API integration — each product
-links out to its own Mollie payment link.
+A storefront for a small home-decor shop selling into the Netherlands.
+Dropshipping model: no stock is held, and payment runs through Stripe's hosted
+Checkout.
 
 Bilingual (English default, Dutch second), statically rendered, deployable to
 Vercel with no custom server.
@@ -18,39 +18,68 @@ npm run lint       # eslint
 npm run format     # prettier
 ```
 
-## Payment links
+## Payments
 
-Copy `.env.example` to `.env.local` and paste one Mollie payment link per
-product:
+Checkout is a [Stripe-hosted Checkout Session](https://docs.stripe.com/payments/accept-a-payment?payment-ui=checkout&ui=stripe-hosted).
+Copy `.env.example` to `.env.local` and fill in a sandbox key and a webhook
+signing secret. Locally:
+
+```bash
+stripe listen --forward-to localhost:3000/api/webhooks/stripe
+```
 
 ```
-NEXT_PUBLIC_MOLLIE_LINK_HEARTH_WOOL_THROW=https://payment-links.mollie.com/payment/xxxx
+app/api/checkout/route.ts          creates the Checkout Session
+app/api/webhooks/stripe/route.ts   turns a paid session into an order
+app/[locale]/order-confirmed/      where Stripe returns the customer
+lib/stripe.ts                      the SDK client, pinned to one API version
+lib/checkout.ts                    the browser's half: post slugs, follow the URL
+lib/shipping.ts                    rate, threshold, countries, delivery window
+lib/fulfilment.ts                  what happens once the money is in
 ```
 
-The mapping lives in `lib/payment-links.ts`. It is written out slug by slug on
-purpose: `NEXT_PUBLIC_*` variables are inlined into the client bundle at build
-time, so they can only be read through a literal property access — a dynamic
-`process.env[key]` lookup resolves to `undefined` in the browser.
+**The browser never sends a price.** It posts slugs, variant ids and
+quantities; `app/api/checkout/route.ts` looks every piece up in
+`data/products.ts` and builds the line items from that. A tampered bag in
+localStorage changes nothing about what is charged.
 
-Products without a link stay usable. **Buy now** puts the piece in the bag and
-says the checkout link is not live yet; the bag shows a dashed placeholder
-instead of a dead button. Add a link, rebuild, and it becomes a real button.
+**Orders come from the webhook, not the success page.** A customer can pay and
+then lose their connection before `/order-confirmed` loads, so anything that
+only ran there would silently drop the order. The handler fulfils on
+`checkout.session.completed` and `checkout.session.async_payment_succeeded`,
+and only once `payment_status` is no longer `unpaid` — the second event and
+that check are what make delayed methods like iDEAL safe to switch on.
 
-Because there is no payment API, a bag with several pieces produces one Mollie
-link per piece rather than a single merged checkout. The bag says so.
+**Fulfilment is a seam, not an implementation.** `lib/fulfilment.ts` logs the
+order and marks where the CJ Dropshipping call and the confirmation email go.
+Its replay guard is an in-process `Set` of event ids, which is enough for one
+instance and not enough for production: move it to a uniqueness constraint on
+the event id in the order table as soon as there is one.
+
+**Shipping terms live in `lib/shipping.ts`.** €4.95 flat, free from €50,
+Netherlands only, 15–30 business days. The Checkout Session, the bag summary
+and the shipping page all read those constants, so the quoted rate and the
+charged rate cannot drift.
+
+**Stripe Tax is not on yet.** The shop's Stripe account is registered in
+Brazil, where Stripe Tax is unavailable and iDEAL cannot be offered, so the
+session runs without `automatic_tax` and without product tax codes. The two
+places that change when an EU entity exists are marked in
+`app/api/checkout/route.ts`.
 
 ## Project layout
 
 ```
 app/[locale]/          routes: home, products, products/[slug], cart,
                        about, contact, checkout-info, cancel-order,
-                       catch-all 404
+                       order-confirmed, catch-all 404
+app/api/               checkout session + Stripe webhook route handlers
 components/            Header, Footer, ProductCard, ProductGallery, Logo, …
 components/ui/         Button, Toast, CurrencyBadge, LoadingSkeleton, Reveal, Carousel
 components/home/       the home page sections
 data/products.ts       the 18-piece catalogue, bilingual, typed
 i18n/                  next-intl routing, navigation and request config
-lib/                   price formatting, payment links, category artwork
+lib/                   price formatting, Stripe, shipping, category artwork
 lib/store/cart.ts      zustand bag, persisted to localStorage
 messages/              en.json, nl.json
 ```

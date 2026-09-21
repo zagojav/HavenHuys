@@ -108,6 +108,7 @@
     "addToBag": "In de tas",
     "adding": "Toevoegen…",
     "buyNow": "Nu kopen",
+    "buyingNow": "Betaalpagina openen…",
     "quantity": "Aantal",
     "decrease": "Aantal verlagen",
     "increase": "Aantal verhogen",
@@ -136,7 +137,7 @@
     },
     "toast": {
       "added": "{name} toegevoegd aan je tas",
-      "noLink": "De betaallink voor dit stuk is nog niet actief. We hebben het zolang in je tas gelegd."
+      "checkoutFailed": "We konden de betaalpagina nu niet openen. Het stuk ligt in je tas — probeer het daar opnieuw."
     },
     "wasLabel": "Voorheen"
   },
@@ -158,16 +159,18 @@
       "title": "Overzicht",
       "subtotal": "Subtotaal",
       "shipping": "Verzending",
-      "shippingValue": "Gratis binnen de EU",
+      "shippingFree": "Gratis",
+      "freeHint": "Nog {amount} en de verzending is gratis.",
       "total": "Totaal",
       "vat": "Inclusief btw waar van toepassing."
     },
     "checkout": {
       "title": "Rond je bestelling af",
-      "body": "Elk stuk wordt betaald via een eigen beveiligde Mollie-link. Open ze één voor één. Je ontvangt voor elk stuk een aparte bevestiging.",
-      "pay": "Betaal voor {name}",
-      "missing": "Betaallink nog niet actief",
-      "missingHelp": "Mail ons en we sturen dezelfde dag een link.",
+      "body": "Eén betaling voor je hele tas, verzorgd door Stripe. Je komt hier terug met je bevestiging.",
+      "pay": "Naar de beveiligde betaling",
+      "pending": "Betaalpagina openen…",
+      "error": "We konden de betaalpagina niet openen. Probeer het opnieuw.",
+      "countries": "We bezorgen voorlopig alleen in Nederland.",
       "help": "Vragen voordat je betaalt?",
       "helpLink": "Neem contact op"
     },
@@ -238,13 +241,9 @@
       "body": "Je bestelling gaat dezelfde dag naar de maker. Je ontvangt een track & trace-link zodra het pakket gescand is, en bij meerdere artikelen een aparte link per stuk.",
       "rows": {
         "nlLabel": "Nederland",
-        "nlValue": "15–30 werkdagen · gratis",
-        "beLabel": "België & Duitsland",
-        "beValue": "15–30 werkdagen · gratis",
-        "euLabel": "Rest van de EU",
-        "euValue": "15–30 werkdagen · gratis boven €75",
-        "outsideLabel": "Buiten de EU",
-        "outsideValue": "Nog geen verzending, mail ons"
+        "nlValue": "{min}–{max} werkdagen · {price}, gratis boven {threshold}",
+        "elsewhereLabel": "Overal elders",
+        "elsewhereValue": "Nog geen verzending, mail ons"
       }
     },
     "delivery": {
@@ -265,9 +264,26 @@
     },
     "payment": {
       "title": "Betalen",
-      "body": "Betalen gaat via Mollie: iDEAL, Bancontact, creditcard, Apple Pay en PayPal. Elk stuk wordt via een eigen link betaald en je ontvangt voor elk stuk een bevestiging."
+      "body": "Betalen gaat via de beveiligde betaalpagina van Stripe, in één keer voor je hele tas. Creditcard en Apple Pay kunnen nu; iDEAL en de andere Nederlandse methodes volgen."
     },
     "cta": "Terug naar de collectie"
+  },
+  "orderConfirmed": {
+    "title": "Dank je. Je bestelling staat genoteerd.",
+    "metaDescription": "Je bestelling bij Haven Huis is bevestigd.",
+    "body": "Er is een bevestiging onderweg naar {email}. Zodra de betaling rond is, gaan we inpakken.",
+    "bodyNoEmail": "Er is een bevestiging onderweg naar het adres waarmee je betaald hebt. Zodra de betaling rond is, gaan we inpakken.",
+    "pending": {
+      "title": "Je betaling is onderweg.",
+      "body": "Je bank heeft hem nog niet bevestigd. Dat duurt meestal een paar minuten. We mailen je zodra het rond is, en er gaat niets weg voordat dat zo is."
+    },
+    "totalLabel": "Totaal betaald",
+    "deliveryLabel": "Levering",
+    "deliveryValue": "{min}–{max} werkdagen, met track & trace",
+    "reference": "Bestelreferentie",
+    "cta": "Terug naar de collectie",
+    "help": "Klopt er iets niet?",
+    "helpLink": "Neem contact op"
   },
   "cancelOrder": {
     "title": "Bestelling annuleren",

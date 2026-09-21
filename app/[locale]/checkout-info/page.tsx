@@ -5,6 +5,12 @@ import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
 import { Reveal } from '@/components/ui/Reveal';
 import { buttonClasses } from '@/components/ui/Button';
+import { formatPrice, formatPriceShort } from '@/lib/format';
+import {
+  DELIVERY_DAYS,
+  FREE_SHIPPING_THRESHOLD_CENTS,
+  SHIPPING_FLAT_CENTS,
+} from '@/lib/shipping';
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -30,11 +36,22 @@ export default async function CheckoutInfoPage({ params }: PageProps) {
 
   const t = await getTranslations('checkoutInfo');
 
+  // Both figures come from lib/shipping.ts, the same constants the Checkout
+  // Session is built from, so this page cannot quote a rate we do not charge.
   const shippingRows = [
-    { label: t('shipping.rows.nlLabel'), value: t('shipping.rows.nlValue') },
-    { label: t('shipping.rows.beLabel'), value: t('shipping.rows.beValue') },
-    { label: t('shipping.rows.euLabel'), value: t('shipping.rows.euValue') },
-    { label: t('shipping.rows.outsideLabel'), value: t('shipping.rows.outsideValue') },
+    {
+      label: t('shipping.rows.nlLabel'),
+      value: t('shipping.rows.nlValue', {
+        min: DELIVERY_DAYS.min,
+        max: DELIVERY_DAYS.max,
+        price: formatPrice(SHIPPING_FLAT_CENTS, locale as Locale),
+        threshold: formatPriceShort(FREE_SHIPPING_THRESHOLD_CENTS, locale as Locale),
+      }),
+    },
+    {
+      label: t('shipping.rows.elsewhereLabel'),
+      value: t('shipping.rows.elsewhereValue'),
+    },
   ];
 
   const returnSteps = [

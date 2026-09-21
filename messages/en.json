@@ -108,6 +108,7 @@
     "addToBag": "Add to bag",
     "adding": "Adding…",
     "buyNow": "Buy now",
+    "buyingNow": "Opening checkout…",
     "quantity": "Quantity",
     "decrease": "Decrease quantity",
     "increase": "Increase quantity",
@@ -136,7 +137,7 @@
     },
     "toast": {
       "added": "{name} added to your bag",
-      "noLink": "Checkout for this piece isn't live yet. We have put it in your bag instead."
+      "checkoutFailed": "We couldn't open checkout just now. The piece is in your bag — try again from there."
     },
     "wasLabel": "Was"
   },
@@ -158,16 +159,18 @@
       "title": "Summary",
       "subtotal": "Subtotal",
       "shipping": "Shipping",
-      "shippingValue": "Free within the EU",
+      "shippingFree": "Free",
+      "freeHint": "Add {amount} for free shipping.",
       "total": "Total",
       "vat": "VAT included where applicable."
     },
     "checkout": {
       "title": "Complete your order",
-      "body": "Each piece is paid for through its own secure Mollie link. Open them one at a time. You will get a separate confirmation for each.",
-      "pay": "Pay for {name}",
-      "missing": "Payment link not live yet",
-      "missingHelp": "Email us and we'll send a link the same day.",
+      "body": "One checkout for the whole bag, handled by Stripe. You come back here with your confirmation.",
+      "pay": "Go to secure checkout",
+      "pending": "Opening checkout…",
+      "error": "We couldn't open checkout. Please try again.",
+      "countries": "We deliver to the Netherlands for now.",
       "help": "Questions before you pay?",
       "helpLink": "Talk to us"
     },
@@ -238,13 +241,9 @@
       "body": "Your order goes to its maker the day it is placed. You'll get a tracking link as soon as the parcel is scanned, and a separate one for each piece in a multi-item order.",
       "rows": {
         "nlLabel": "Netherlands",
-        "nlValue": "15–30 business days · free",
-        "beLabel": "Belgium & Germany",
-        "beValue": "15–30 business days · free",
-        "euLabel": "Rest of the EU",
-        "euValue": "15–30 business days · free over €75",
-        "outsideLabel": "Outside the EU",
-        "outsideValue": "Not shipping yet, write to us"
+        "nlValue": "{min}–{max} business days · {price}, free over {threshold}",
+        "elsewhereLabel": "Everywhere else",
+        "elsewhereValue": "Not shipping yet, write to us"
       }
     },
     "delivery": {
@@ -265,9 +264,26 @@
     },
     "payment": {
       "title": "Payment",
-      "body": "Payment runs through Mollie: iDEAL, Bancontact, credit card, Apple Pay and PayPal. Each piece is paid for through its own link, and you'll receive a confirmation for each one."
+      "body": "Payment runs through Stripe's secure checkout, and the whole bag is paid for in one go. Cards and Apple Pay are accepted today; iDEAL and the other Dutch methods follow."
     },
     "cta": "Back to the collection"
+  },
+  "orderConfirmed": {
+    "title": "Thank you. Your order is in.",
+    "metaDescription": "Your Haven Huis order is confirmed.",
+    "body": "A confirmation is on its way to {email}. We start picking as soon as the payment clears.",
+    "bodyNoEmail": "A confirmation is on its way to the address you paid with. We start picking as soon as the payment clears.",
+    "pending": {
+      "title": "Your payment is on its way.",
+      "body": "Your bank has not confirmed it yet. That usually takes a few minutes. We email you the moment it clears, and nothing ships before it does."
+    },
+    "totalLabel": "Total paid",
+    "deliveryLabel": "Delivery",
+    "deliveryValue": "{min}–{max} business days, tracked",
+    "reference": "Order reference",
+    "cta": "Back to the collection",
+    "help": "Something not right?",
+    "helpLink": "Talk to us"
   },
   "cancelOrder": {
     "title": "Cancel your order",
