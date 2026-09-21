@@ -1,0 +1,330 @@
+{
+  "site": {
+    "name": "Haven Huis",
+    "tagline": "Objecten voor een huis waarin geleefd wordt.",
+    "description": "Haven Huis is een kleine woondecoratiewinkel voor Nederland: verlichting, textiel, opberging, tafelgerei en stille objecten, per stuk ingekocht en geleverd in 15–30 werkdagen."
+  },
+  "nav": {
+    "shop": "Shop",
+    "about": "Over ons",
+    "contact": "Contact",
+    "shipping": "Verzending & retour",
+    "bag": "Tas",
+    "cancelOrder": "Bestelling annuleren",
+    "bagWithCount": "Tas, {count, plural, one {# artikel} other {# artikelen}}",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "language": "Taal",
+    "switchTo": "Taal wisselen",
+    "home": "Haven Huis startpagina"
+  },
+  "categories": {
+    "all": "Alles",
+    "lighting": "Verlichting",
+    "textiles": "Textiel",
+    "storage": "Opberging",
+    "tableware": "Tafelgerei",
+    "decorObjects": "Decoratie"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Per bestelling ingekocht · 15–30 dagen",
+      "headline": "Objecten die een huis bewoond maken.",
+      "body": "Verlichting, linnen en keramiek, uitgekozen op hoe ze verouderen. Elk stuk wordt apart ingekocht en verstuurd zodra je bestelt, in plaats van uit een magazijnstelling gepakt.",
+      "cta": "Bekijk de collectie",
+      "secondary": "Ons verhaal",
+      "imageAlt": "Warme neutrale woonkamer met rotan spiegels, linnen zitmeubels en droogbloemen"
+    },
+    "categories": {
+      "eyebrow": "Bekijken",
+      "title": "Begin bij één kamer",
+      "body": "Vijf selecties, elk bewust klein gehouden.",
+      "cta": "Bekijk alle stukken"
+    },
+    "bestsellers": {
+      "eyebrow": "Favorieten",
+      "title": "Waar wij zouden beginnen",
+      "body": "De stukken die wij zelf als eerste in huis zouden halen.",
+      "cta": "Bekijk alles",
+      "scrollHint": "Scroll voor meer",
+      "previous": "Vorige producten",
+      "next": "Volgende producten"
+    },
+    "values": {
+      "shipping": {
+        "title": "Bezorgd tot aan je deur",
+        "body": "Elk stuk wordt apart ingekocht en verstuurd. Vijftien tot dertig werkdagen, met track & trace."
+      },
+      "quality": {
+        "title": "Gemaakt om te houden",
+        "body": "Gekozen op materiaal en verhoudingen, en op hoe ze er na een paar jaar gebruik uitzien."
+      },
+      "returns": {
+        "title": "Dertig dagen bedenktijd",
+        "body": "Van gedachten veranderd? Stuur het terug. Wij betalen het retourlabel."
+      }
+    },
+    "editorial": {
+      "eyebrow": "Onze aanpak",
+      "title": "Een kamer is af wanneer je hem niet meer opmerkt.",
+      "body1": "We zijn niet geïnteresseerd in kamers die goed op de foto staan maar waarin niemand wil zitten. De goede kamers zijn stiller dan dat. Een lamp op de juiste hoogte, wol die zijn vorm houdt, een kom die op dinsdag gewoon gebruikt wordt.",
+      "body2": "Daarom kopen we langzaam in. Elk stuk beoordelen we op dezelfde punten voordat het op de site komt, en wat dun of schreeuwerig aanvoelt, haalt het niet.",
+      "cta": "Over Haven Huis",
+      "imageAlt": "Linnen bank met een gevouwen plaid en droogbloemen in een hoge vaas"
+    },
+    "newsletter": {
+      "title": "Langzame post",
+      "body": "Eén brief per maand. Nieuwe stukken, een kamer die ons beviel, verder niets.",
+      "placeholder": "Je e-mailadres",
+      "cta": "Aanmelden",
+      "sending": "Bezig met aanmelden…",
+      "success": "Welkom. Houd je inbox in de gaten.",
+      "invalid": "Vul een geldig e-mailadres in.",
+      "legal": "Niet delen, niet verkopen. Afmelden met één klik."
+    }
+  },
+  "products": {
+    "title": "De collectie",
+    "lead": "Twaalf stukken, langzaam gekozen en per bestelling ingekocht.",
+    "metaDescription": "Bekijk de volledige Haven Huis-collectie: verlichting, textiel, opberging, tafelgerei en decoratie, per stuk ingekocht en geleverd in 15–30 werkdagen.",
+    "filterLabel": "Filter op categorie",
+    "sortLabel": "Sorteren",
+    "sort": {
+      "featured": "Uitgelicht",
+      "newest": "Nieuwste eerst",
+      "priceAsc": "Prijs: laag naar hoog",
+      "priceDesc": "Prijs: hoog naar laag"
+    },
+    "count": "{count, plural, =0 {Geen stukken} one {# stuk} other {# stukken}}",
+    "empty": {
+      "title": "Nog niets in deze selectie.",
+      "body": "Probeer een andere categorie. De rest van de collectie is één tik verderop.",
+      "cta": "Toon alles"
+    },
+    "loading": "De collectie wordt geladen"
+  },
+  "product": {
+    "back": "Terug naar de collectie",
+    "addToBag": "In de tas",
+    "adding": "Toevoegen…",
+    "buyNow": "Nu kopen",
+    "quantity": "Aantal",
+    "decrease": "Aantal verlagen",
+    "increase": "Aantal verhogen",
+    "details": "Details",
+    "material": "Materiaal",
+    "dimensions": "Afmetingen",
+    "delivery": "Levering",
+    "deliveryValue": "15–30 werkdagen, met track & trace",
+    "returns": "Retour",
+    "returnsValue": "30 dagen, retourlabel vergoed",
+    "related": "Misschien ook iets voor jou",
+    "gallery": {
+      "label": "Productafbeeldingen",
+      "thumbLabel": "Toon afbeelding {index}",
+      "zoomHint": "Beweeg erover om in te zoomen"
+    },
+    "badge": {
+      "new": "Nieuw",
+      "bestseller": "Onze keuze"
+    },
+    "was": "Voorheen {price}",
+    "notFound": {
+      "title": "We konden dit stuk niet vinden.",
+      "body": "Het is misschien uitverkocht of verplaatst. De rest van de collectie staat er nog.",
+      "cta": "Terug naar de collectie"
+    },
+    "toast": {
+      "added": "{name} toegevoegd aan je tas",
+      "noLink": "De betaallink voor dit stuk is nog niet actief. We hebben het zolang in je tas gelegd."
+    },
+    "wasLabel": "Voorheen"
+  },
+  "cart": {
+    "title": "Je tas",
+    "metaDescription": "Bekijk de stukken in je Haven Huis-tas en rond je bestelling af.",
+    "empty": {
+      "title": "Je tas is leeg.",
+      "body": "Nog niets gekozen. De collectie telt twaalf stukken.",
+      "cta": "Bekijk de collectie"
+    },
+    "item": "Artikel",
+    "remove": "{name} verwijderen",
+    "removed": "{name} uit je tas verwijderd",
+    "clear": "Tas legen",
+    "cleared": "Je tas is weer leeg",
+    "continue": "Verder winkelen",
+    "summary": {
+      "title": "Overzicht",
+      "subtotal": "Subtotaal",
+      "shipping": "Verzending",
+      "shippingValue": "Gratis binnen de EU",
+      "total": "Totaal",
+      "vat": "Inclusief btw waar van toepassing."
+    },
+    "checkout": {
+      "title": "Rond je bestelling af",
+      "body": "Elk stuk wordt betaald via een eigen beveiligde Mollie-link. Open ze één voor één. Je ontvangt voor elk stuk een aparte bevestiging.",
+      "pay": "Betaal voor {name}",
+      "missing": "Betaallink nog niet actief",
+      "missingHelp": "Mail ons en we sturen dezelfde dag een link.",
+      "help": "Vragen voordat je betaalt?",
+      "helpLink": "Neem contact op"
+    },
+    "loading": "Je tas wordt geladen",
+    "decrease": "Aantal van {name} verlagen",
+    "increase": "Aantal van {name} verhogen"
+  },
+  "about": {
+    "title": "Over ons",
+    "metaTitle": "Over Haven Huis",
+    "metaDescription": "Haven Huis is een kleine woondecoratiewinkel vanuit Rotterdam, met verlichting, textiel en keramiek, uitgekozen op hoe ze verouderen.",
+    "lead": "Haven betekent toevlucht. Huis spreekt voor zich. Wij verkopen wat daarvoor nodig is.",
+    "body1": "Haven Huis begon in een appartement in Rotterdam met een probleem dat de meeste mensen herkennen: alles wat er te koop was, was óf wegwerp óf onbetaalbaar, en maar weinig ervan was interessant. Dus zijn we zelf gaan kiezen, stuk voor stuk, met steeds dezelfde vraag. Zouden we hier zelf mee willen wonen?",
+    "body2": "We houden het assortiment bewust klein. Bij twaalf stukken is er over elk stuk nagedacht. We kijken eerst naar het materiaal, dan naar de verhoudingen, en dan naar hoe een stuk staat naast de dingen die je al hebt. Wat goed op de foto staat maar niet prettig woont, valt af.",
+    "body3": "Er ligt hier niets in een magazijn. Elk stuk wordt apart ingekocht en verstuurd zodra je bestelt, en dat duurt vijftien tot dertig werkdagen. Dat is langzamer dan een stelling op twee uur afstand, en het is de reden dat de prijs is wat hij is. Past een stuk niet, dan lossen dertig dagen en een voorgefrankeerd label dat op.",
+    "imageAlt": "Neutrale woonkamer met gelaagd textiel en gevlochten manden",
+    "stats": {
+      "pieces": "Stukken in de collectie",
+      "returns": "Dagen bedenktijd",
+      "delivery": "Werkdagen tot aan je deur"
+    },
+    "cta": "Bekijk de collectie"
+  },
+  "contact": {
+    "title": "Contact",
+    "metaDescription": "Vragen over een stuk, een bestelling of een levering? Schrijf Haven Huis en we antwoorden binnen één werkdag.",
+    "lead": "Een vraag over een stuk, een bestelling of een kamer die je probeert op te lossen. We antwoorden binnen één werkdag.",
+    "form": {
+      "name": "Je naam",
+      "namePlaceholder": "Sanne de Vries",
+      "email": "E-mailadres",
+      "emailPlaceholder": "jij@voorbeeld.nl",
+      "subject": "Onderwerp",
+      "subjectPlaceholder": "Over de Hearth wollen plaid",
+      "message": "Bericht",
+      "messagePlaceholder": "Vertel ons waar je naar op zoek bent…",
+      "submit": "Verstuur bericht",
+      "sending": "Versturen…",
+      "success": "Dank je. Je bericht is onderweg en we antwoorden binnen één werkdag.",
+      "successToast": "Bericht verstuurd"
+    },
+    "errors": {
+      "nameMin": "Vertel ons even je naam.",
+      "emailInvalid": "Dat lijkt geen e-mailadres te zijn.",
+      "subjectMin": "Voeg een kort onderwerp toe.",
+      "messageMin": "Nog een paar woorden graag, minimaal 20 tekens.",
+      "messageMax": "Dat is wat aan de lange kant. Houd het onder de 1000 tekens."
+    },
+    "aside": {
+      "title": "Andere manieren",
+      "emailLabel": "E-mail",
+      "email": "hello@havenhuis.nl",
+      "hoursLabel": "Openingstijden",
+      "hours": "Maandag tot vrijdag, 09:00–17:00 CET",
+      "warehouseLabel": "Gevestigd in",
+      "warehouse": "Rotterdam, Nederland",
+      "shippingNote": "Op zoek naar levertijden of retourvoorwaarden?",
+      "shippingLink": "Lees verzending & retour"
+    },
+    "note": "Dit formulier werkt alleen in de browser. Er wordt niets opgeslagen of verstuurd totdat je een mailservice koppelt."
+  },
+  "checkoutInfo": {
+    "title": "Verzending & retour",
+    "metaDescription": "Levertijden, verzendkosten en het retourbeleid van 30 dagen bij Haven Huis. Elke bestelling wordt geleverd in 15–30 werkdagen.",
+    "lead": "De levertijd is 15–30 werkdagen. Elk artikel wordt apart ingekocht en verstuurd, zodat we de kwaliteit kunnen nakijken.",
+    "shipping": {
+      "title": "Verzending",
+      "body": "Je bestelling gaat dezelfde dag naar de maker. Je ontvangt een track & trace-link zodra het pakket gescand is, en bij meerdere artikelen een aparte link per stuk.",
+      "rows": {
+        "nlLabel": "Nederland",
+        "nlValue": "15–30 werkdagen · gratis",
+        "beLabel": "België & Duitsland",
+        "beValue": "15–30 werkdagen · gratis",
+        "euLabel": "Rest van de EU",
+        "euValue": "15–30 werkdagen · gratis boven €75",
+        "outsideLabel": "Buiten de EU",
+        "outsideValue": "Nog geen verzending, mail ons"
+      }
+    },
+    "delivery": {
+      "title": "Waarom het zo lang duurt",
+      "body": "We houden geen voorraad aan. Elk stuk wordt voor jouw bestelling ingekocht en reist afzonderlijk, waardoor een bestelling van drie artikelen als drie pakketten op drie verschillende dagen kan aankomen. Alles is te volgen vanaf de eerste scan."
+    },
+    "returns": {
+      "title": "Retourneren",
+      "body": "Dertig dagen vanaf levering, om welke reden dan ook. Het stuk moet terugkomen in een staat waarin je het zelf ook zou willen ontvangen. De originele verpakking helpt, maar is niet verplicht.",
+      "steps": {
+        "one": "Mail hello@havenhuis.nl met je bestelnummer.",
+        "two": "Wij sturen binnen één werkdag een voorgefrankeerd label.",
+        "three": "Lever het pakket af bij een willekeurig afhaalpunt.",
+        "four": "De terugbetaling staat 3–5 werkdagen na ontvangst van het pakket op je rekening."
+      },
+      "note": "Ook op maat gemaakte en afgeprijsde stukken vallen eronder. Alleen kaarsen die al gebrand hebben zijn uitgesloten, om de voor de hand liggende reden.",
+      "cancelLink": "Liever een bestelling annuleren?"
+    },
+    "payment": {
+      "title": "Betalen",
+      "body": "Betalen gaat via Mollie: iDEAL, Bancontact, creditcard, Apple Pay en PayPal. Elk stuk wordt via een eigen link betaald en je ontvangt voor elk stuk een bevestiging."
+    },
+    "cta": "Terug naar de collectie"
+  },
+  "cancelOrder": {
+    "title": "Bestelling annuleren",
+    "metaDescription": "Annuleer een bestelling bij Haven Huis in één stap. Je wettelijke herroepingsrecht van 14 dagen en het formulier waarmee je annuleert.",
+    "lead": "Eén formulier, één stap. Vul het in en de annulering is onderweg — geen telefoontje, en een reden hoef je niet te geven.",
+    "form": {
+      "orderNumber": "Bestelnummer",
+      "orderNumberPlaceholder": "HH-100234",
+      "orderNumberHelp": "Dit staat in de onderwerpregel van je bevestigingsmail.",
+      "email": "E-mailadres",
+      "emailPlaceholder": "jij@voorbeeld.nl",
+      "emailHelp": "Gebruik het adres waarmee je besteld hebt.",
+      "confirm": "Ik wil deze bestelling annuleren.",
+      "submit": "Deze bestelling annuleren",
+      "sending": "Annuleren…",
+      "success": "Je annulering is geregistreerd. We bevestigen hem binnen één werkdag per e-mail, en een al betaald bedrag staat binnen 14 dagen terug op je rekening.",
+      "successToast": "Annulering verstuurd",
+      "again": "Nog een bestelling annuleren"
+    },
+    "errors": {
+      "orderNumberMin": "Vul het bestelnummer uit je bevestigingsmail in.",
+      "emailInvalid": "Dat lijkt geen e-mailadres te zijn.",
+      "confirmRequired": "Vink het vakje aan om de annulering te bevestigen."
+    },
+    "rights": {
+      "title": "Je herroepingsrecht",
+      "body": "Je hebt 14 dagen vanaf de dag waarop het laatste stuk uit je bestelling bij je aankomt om de koop te herroepen. Je hoeft geen reden op te geven en het gebruik van dat recht kost je niets. Het is een wettelijk recht uit het Europese consumentenrecht, niet iets wat deze winkel je toekent.",
+      "policy": "Haven Huis geeft je 30 dagen in plaats van 14, dus het winkelbeleid is het ruimste van de twee en komt boven op het wettelijke recht. Wat je ook gebruikt, je bent nooit slechter af dan de wet je laat.",
+      "refund": "We betalen alles terug wat je betaald hebt, inclusief de standaard verzendkosten, binnen 14 dagen na de annulering. Is een pakket al bij je bezorgd, stuur het dan eerst terug — het retourlabel is voor onze rekening.",
+      "link": "Lees verzending & retour"
+    },
+    "note": "Dit formulier werkt alleen in de browser. Er wordt niets opgeslagen of verstuurd totdat je een mailservice koppelt."
+  },
+  "footer": {
+    "blurb": "Verlichting, textiel en stille objecten voor huizen in Nederland en de rest van de EU.",
+    "shopTitle": "Shop",
+    "houseTitle": "Haven Huis",
+    "helpTitle": "Hulp",
+    "newsletterTitle": "Langzame post",
+    "newsletterBody": "Eén brief per maand. Verder niets.",
+    "social": "Volg Haven Huis",
+    "instagram": "Instagram",
+    "pinterest": "Pinterest",
+    "rights": "© {year} Haven Huis. Alle rechten voorbehouden.",
+    "kvk": "KvK 87654321 · Rotterdam",
+    "terms": "Voorwaarden",
+    "privacy": "Privacy"
+  },
+  "notFound": {
+    "title": "Deze pagina is verhuisd.",
+    "body": "De link die je volgde leidt nergens meer heen. De collectie staat nog waar je hem achterliet.",
+    "cta": "Terug naar de shop"
+  },
+  "common": {
+    "close": "Sluiten",
+    "closeNotification": "Melding sluiten",
+    "skipToContent": "Naar de inhoud",
+    "loading": "Laden"
+  }
+}

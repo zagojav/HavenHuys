@@ -1,0 +1,330 @@
+{
+  "site": {
+    "name": "Haven Huis",
+    "tagline": "Objects for a house that feels lived in.",
+    "description": "Haven Huis is a small home decor shop for the Netherlands: lighting, textiles, storage, tableware and quiet objects, each piece sourced individually and delivered in 15–30 business days."
+  },
+  "nav": {
+    "shop": "Shop",
+    "about": "About",
+    "contact": "Contact",
+    "shipping": "Shipping & returns",
+    "bag": "Bag",
+    "cancelOrder": "Cancel your order",
+    "bagWithCount": "Bag, {count, plural, one {# item} other {# items}}",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "switchTo": "Switch language",
+    "home": "Haven Huis home"
+  },
+  "categories": {
+    "all": "Everything",
+    "lighting": "Lighting",
+    "textiles": "Textiles",
+    "storage": "Storage",
+    "tableware": "Tableware",
+    "decorObjects": "Decor objects"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Sourced to order · 15–30 days",
+      "headline": "Objects that make a house feel lived in.",
+      "body": "Lighting, linen and ceramics chosen for the way they age. Each piece is sourced and sent on its own once you order it, rather than pulled off a warehouse shelf.",
+      "cta": "Shop the collection",
+      "secondary": "Our story",
+      "imageAlt": "Warm neutral living room with rattan mirrors, linen seating and dried grasses"
+    },
+    "categories": {
+      "eyebrow": "Browse",
+      "title": "Start with one room",
+      "body": "Five edits, each deliberately small.",
+      "cta": "See all pieces"
+    },
+    "bestsellers": {
+      "eyebrow": "Favourites",
+      "title": "Where we would start",
+      "body": "The ones we would put in our own rooms first.",
+      "cta": "View all",
+      "scrollHint": "Scroll for more",
+      "previous": "Previous products",
+      "next": "Next products"
+    },
+    "values": {
+      "shipping": {
+        "title": "Shipped to your door",
+        "body": "Each piece is sourced and sent individually. Fifteen to thirty business days, tracked."
+      },
+      "quality": {
+        "title": "Made to be kept",
+        "body": "Chosen for material and proportion, and for how they look after a few years of use."
+      },
+      "returns": {
+        "title": "Thirty days to decide",
+        "body": "Change your mind and send it back. We cover the return label."
+      }
+    },
+    "editorial": {
+      "eyebrow": "Our approach",
+      "title": "A room is finished when you stop noticing it.",
+      "body1": "We are not interested in rooms that photograph well and live badly. The good ones are quieter than that. A lamp at the right height, wool that holds its shape, a bowl that gets used on a Tuesday.",
+      "body2": "So we choose slowly. Every piece has to answer the same questions before it goes on the site, and anything that feels thin or loud does not make it.",
+      "cta": "About Haven Huis",
+      "imageAlt": "Linen sofa with a folded throw and dried grasses in a tall vase"
+    },
+    "newsletter": {
+      "title": "Slow post",
+      "body": "One letter a month. New arrivals, a room we liked, nothing else.",
+      "placeholder": "Your email address",
+      "cta": "Subscribe",
+      "sending": "Subscribing…",
+      "success": "Welcome. Look out for the first letter.",
+      "invalid": "Please enter a valid email address.",
+      "legal": "No sharing, no selling. Unsubscribe in one click."
+    }
+  },
+  "products": {
+    "title": "The collection",
+    "lead": "Twelve pieces, chosen slowly and sourced one order at a time.",
+    "metaDescription": "Browse the full Haven Huis collection: lighting, textiles, storage, tableware and decor objects, sourced individually and delivered in 15–30 business days.",
+    "filterLabel": "Filter by category",
+    "sortLabel": "Sort",
+    "sort": {
+      "featured": "Featured",
+      "newest": "Newest first",
+      "priceAsc": "Price: low to high",
+      "priceDesc": "Price: high to low"
+    },
+    "count": "{count, plural, =0 {No pieces} one {# piece} other {# pieces}}",
+    "empty": {
+      "title": "Nothing in this edit yet.",
+      "body": "Try another category. The rest of the collection is one tap away.",
+      "cta": "Show everything"
+    },
+    "loading": "Loading the collection"
+  },
+  "product": {
+    "back": "Back to the collection",
+    "addToBag": "Add to bag",
+    "adding": "Adding…",
+    "buyNow": "Buy now",
+    "quantity": "Quantity",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "details": "Details",
+    "material": "Material",
+    "dimensions": "Dimensions",
+    "delivery": "Delivery",
+    "deliveryValue": "15–30 business days, tracked",
+    "returns": "Returns",
+    "returnsValue": "30 days, return label covered",
+    "related": "You may also like",
+    "gallery": {
+      "label": "Product images",
+      "thumbLabel": "Show image {index}",
+      "zoomHint": "Hover to zoom"
+    },
+    "badge": {
+      "new": "New",
+      "bestseller": "Our pick"
+    },
+    "was": "Was {price}",
+    "notFound": {
+      "title": "We couldn't find that piece.",
+      "body": "It may have sold out or moved. The rest of the collection is still here.",
+      "cta": "Back to the collection"
+    },
+    "toast": {
+      "added": "{name} added to your bag",
+      "noLink": "Checkout for this piece isn't live yet. We have put it in your bag instead."
+    },
+    "wasLabel": "Was"
+  },
+  "cart": {
+    "title": "Your bag",
+    "metaDescription": "Review the pieces in your Haven Huis bag and complete your order.",
+    "empty": {
+      "title": "Your bag is empty.",
+      "body": "Nothing chosen yet. The collection is twelve pieces deep.",
+      "cta": "Browse the collection"
+    },
+    "item": "Item",
+    "remove": "Remove {name}",
+    "removed": "{name} removed from your bag",
+    "clear": "Empty the bag",
+    "cleared": "Your bag is empty again",
+    "continue": "Continue shopping",
+    "summary": {
+      "title": "Summary",
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "shippingValue": "Free within the EU",
+      "total": "Total",
+      "vat": "VAT included where applicable."
+    },
+    "checkout": {
+      "title": "Complete your order",
+      "body": "Each piece is paid for through its own secure Mollie link. Open them one at a time. You will get a separate confirmation for each.",
+      "pay": "Pay for {name}",
+      "missing": "Payment link not live yet",
+      "missingHelp": "Email us and we'll send a link the same day.",
+      "help": "Questions before you pay?",
+      "helpLink": "Talk to us"
+    },
+    "loading": "Loading your bag",
+    "decrease": "Decrease quantity of {name}",
+    "increase": "Increase quantity of {name}"
+  },
+  "about": {
+    "title": "About",
+    "metaTitle": "About Haven Huis",
+    "metaDescription": "Haven Huis is a small home decor shop run from Rotterdam, selling lighting, textiles and ceramics chosen for the way they age.",
+    "lead": "Haven means refuge. Huis means house. We sell the things that turn one into the other.",
+    "body1": "Haven Huis started in a flat in Rotterdam with a problem most people recognise: everything on offer was either disposable or unaffordable, and very little of it was interesting. So we started choosing pieces ourselves, one at a time, against a single question. Would we live with this?",
+    "body2": "We keep the range small on purpose. Twelve pieces means every one of them was argued over. We look at the material first, then the proportion, then how a piece will sit next to the things you already own. Anything that photographs well and lives badly is left out.",
+    "body3": "Nothing here is warehoused. Each piece is sourced and shipped on its own once you order it, which takes fifteen to thirty business days. That is slower than a shelf two hours away, and it is the reason the price is what it is. If a piece is not right, thirty days and a prepaid label will sort it out.",
+    "imageAlt": "Neutral living room with layered textiles and woven baskets",
+    "stats": {
+      "pieces": "Pieces in the collection",
+      "returns": "Days to change your mind",
+      "delivery": "Business days to your door"
+    },
+    "cta": "See the collection"
+  },
+  "contact": {
+    "title": "Contact",
+    "metaDescription": "Questions about a piece, an order or a delivery? Write to Haven Huis and we'll answer within one working day.",
+    "lead": "A question about a piece, an order, or a room you're trying to solve. We answer within one working day.",
+    "form": {
+      "name": "Your name",
+      "namePlaceholder": "Sanne de Vries",
+      "email": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "About the Hearth wool throw",
+      "message": "Message",
+      "messagePlaceholder": "Tell us what you're looking for…",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thank you. Your message is on its way, and we reply within one working day.",
+      "successToast": "Message sent"
+    },
+    "errors": {
+      "nameMin": "Please tell us your name.",
+      "emailInvalid": "That doesn't look like an email address.",
+      "subjectMin": "Add a short subject.",
+      "messageMin": "A few more words, please. At least 20 characters.",
+      "messageMax": "That's a little long. Keep it under 1000 characters."
+    },
+    "aside": {
+      "title": "Other ways",
+      "emailLabel": "Email",
+      "email": "hello@havenhuis.nl",
+      "hoursLabel": "Hours",
+      "hours": "Monday to Friday, 09:00–17:00 CET",
+      "warehouseLabel": "Based in",
+      "warehouse": "Rotterdam, Netherlands",
+      "shippingNote": "Looking for delivery times or returns?",
+      "shippingLink": "Read shipping & returns"
+    },
+    "note": "This form runs in the browser only. Nothing is stored or sent until you connect a mail service."
+  },
+  "checkoutInfo": {
+    "title": "Shipping & returns",
+    "metaDescription": "Haven Huis shipping times, delivery costs and the 30-day return policy. Every order is delivered in 15–30 business days.",
+    "lead": "Shipping time is 15–30 business days. Each item is sourced and shipped individually to ensure quality.",
+    "shipping": {
+      "title": "Shipping",
+      "body": "Your order goes to its maker the day it is placed. You'll get a tracking link as soon as the parcel is scanned, and a separate one for each piece in a multi-item order.",
+      "rows": {
+        "nlLabel": "Netherlands",
+        "nlValue": "15–30 business days · free",
+        "beLabel": "Belgium & Germany",
+        "beValue": "15–30 business days · free",
+        "euLabel": "Rest of the EU",
+        "euValue": "15–30 business days · free over €75",
+        "outsideLabel": "Outside the EU",
+        "outsideValue": "Not shipping yet, write to us"
+      }
+    },
+    "delivery": {
+      "title": "Why it takes the time it does",
+      "body": "We hold no stock. Each piece is picked for your order and travels on its own, which is why an order of three items can arrive as three parcels on three different days. Everything is tracked from the first scan."
+    },
+    "returns": {
+      "title": "Returns",
+      "body": "Thirty days from delivery, for any reason. The piece needs to come back in a condition you would be happy to receive it in. The original packaging helps but is not required.",
+      "steps": {
+        "one": "Email hello@havenhuis.nl with your order number.",
+        "two": "We send a prepaid label within one working day.",
+        "three": "Drop the parcel at any pickup point.",
+        "four": "Refund lands 3–5 business days after the parcel reaches us."
+      },
+      "note": "Made-to-order and sale pieces are covered too. Only candles that have been burned are excluded, for the obvious reason.",
+      "cancelLink": "Cancel an order instead"
+    },
+    "payment": {
+      "title": "Payment",
+      "body": "Payment runs through Mollie: iDEAL, Bancontact, credit card, Apple Pay and PayPal. Each piece is paid for through its own link, and you'll receive a confirmation for each one."
+    },
+    "cta": "Back to the collection"
+  },
+  "cancelOrder": {
+    "title": "Cancel your order",
+    "metaDescription": "Cancel a Haven Huis order in one step. Your statutory 14-day right of withdrawal and the form that starts the cancellation.",
+    "lead": "One form, one step. Fill it in and the cancellation is on its way — no phone call, and no reason needed.",
+    "form": {
+      "orderNumber": "Order number",
+      "orderNumberPlaceholder": "HH-100234",
+      "orderNumberHelp": "It is in the subject line of your confirmation email.",
+      "email": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "emailHelp": "Use the address you ordered with.",
+      "confirm": "I want to cancel this order.",
+      "submit": "Cancel this order",
+      "sending": "Cancelling…",
+      "success": "Your cancellation is logged. We confirm it by email within one working day, and anything already paid is refunded within 14 days.",
+      "successToast": "Cancellation sent",
+      "again": "Cancel another order"
+    },
+    "errors": {
+      "orderNumberMin": "Add the order number from your confirmation email.",
+      "emailInvalid": "That doesn't look like an email address.",
+      "confirmRequired": "Tick the box to confirm the cancellation."
+    },
+    "rights": {
+      "title": "Your right to cancel",
+      "body": "You have 14 days from the day the last piece in your order reaches you to withdraw from the purchase. You do not have to give a reason, and using the right costs you nothing. It is a statutory right under EU consumer law, not something this shop grants you.",
+      "policy": "Haven Huis gives you 30 days rather than 14, so the shop policy is the more generous of the two and applies on top of the statutory right. Whichever you use, you are never worse off than the law leaves you.",
+      "refund": "We refund everything you paid, standard delivery included, within 14 days of the cancellation. If a parcel has already reached you, send it back first — the return label is on us.",
+      "link": "Read shipping & returns"
+    },
+    "note": "This form runs in the browser only. Nothing is stored or sent until a mail service is connected."
+  },
+  "footer": {
+    "blurb": "Lighting, textiles and quiet objects for houses in the Netherlands and across the EU.",
+    "shopTitle": "Shop",
+    "houseTitle": "Haven Huis",
+    "helpTitle": "Help",
+    "newsletterTitle": "Slow post",
+    "newsletterBody": "One letter a month. Nothing else.",
+    "social": "Follow Haven Huis",
+    "instagram": "Instagram",
+    "pinterest": "Pinterest",
+    "rights": "© {year} Haven Huis. All rights reserved.",
+    "kvk": "KvK 87654321 · Rotterdam",
+    "terms": "Terms",
+    "privacy": "Privacy"
+  },
+  "notFound": {
+    "title": "This page has moved out.",
+    "body": "The link you followed doesn't lead anywhere any more. The collection is still where you left it.",
+    "cta": "Back to the shop"
+  },
+  "common": {
+    "close": "Close",
+    "closeNotification": "Close notification",
+    "skipToContent": "Skip to content",
+    "loading": "Loading"
+  }
+}
