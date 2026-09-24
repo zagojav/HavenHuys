@@ -2,6 +2,7 @@
 
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
+import { getProduct } from '@/data/products';
 
 export interface CartLine {
   /** `slug` plus the chosen variant, so two variants sit on separate rows. */
@@ -22,6 +23,8 @@ interface CartState {
   setQuantity: (id: string, quantity: number) => void;
   clear: () => void;
   setHydrated: () => void;
+  /** Drops rows for pieces that have left the catalogue since the bag was saved. */
+  pruneWithdrawn: () => void;
 }
 
 const lineId = (slug: string, variantId?: string) =>
@@ -64,12 +67,27 @@ export const useCart = create<CartState>()(
       clear: () => set({ lines: [] }),
 
       setHydrated: () => set({ hydrated: true }),
+
+      pruneWithdrawn: () =>
+        set((state) => {
+          const live = state.lines.filter((l) => getProduct(l.slug));
+          // Keep the original array when nothing changed, so the store does
+          // not notify subscribers on every rehydrate.
+          return live.length === state.lines.length ? state : { lines: live };
+        }),
     }),
     {
       name: 'haven-huis-bag',
       storage: createJSONStorage(() => localStorage),
       partialize: (state) => ({ lines: state.lines }) as CartState,
-      onRehydrateStorage: () => (state) => state?.setHydrated(),
+      // A bag saved before a piece was withdrawn still holds that row. The bag
+      // page already skips what it cannot resolve, but the header count reads
+      // the raw lines — so prune first, then mark the store hydrated, and the
+      // two agree.
+      onRehydrateStorage: () => (state) => {
+        state?.pruneWithdrawn();
+        state?.setHydrated();
+      },
     },
   ),
 );

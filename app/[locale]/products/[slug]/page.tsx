@@ -1,16 +1,18 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { ArrowLeft, PackageCheck, Ruler, Sprout, Undo2 } from 'lucide-react';
+import { ArrowLeft, PackageCheck, Ruler, Sprout, Truck, Undo2 } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { routing, type Locale } from '@/i18n/routing';
 import { getProduct, products, relatedProducts } from '@/data/products';
 import { ProductGallery } from '@/components/ProductGallery';
 import { ProductPurchase } from '@/components/ProductPurchase';
 import { ProductCard } from '@/components/ProductCard';
+import { TrustBadges } from '@/components/TrustBadges';
 import { CurrencyBadge } from '@/components/ui/CurrencyBadge';
 import { Reveal } from '@/components/ui/Reveal';
-import { formatPrice } from '@/lib/format';
+import { formatPrice, formatPriceShort } from '@/lib/format';
+import { FREE_SHIPPING_THRESHOLD_CENTS } from '@/lib/shipping';
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -139,9 +141,18 @@ export default async function ProductPage({ params }: PageProps) {
                 {t('was', { price: formatPrice(product.compareAtCents, key) })}
               </p>
             )}
+            <p className="text-text-secondary mt-3 text-sm">{product.valueNote[key]}</p>
+            <p className="text-text-secondary mt-1.5 flex items-center gap-1.5 text-xs">
+              <Truck className="size-3.5 shrink-0" strokeWidth={1.6} />
+              {t('freeShipping', {
+                threshold: formatPriceShort(FREE_SHIPPING_THRESHOLD_CENTS, key),
+              })}
+            </p>
           </div>
 
           <ProductPurchase product={product} locale={key} />
+
+          <TrustBadges className="mt-6" />
 
           <div className="border-border mt-10 border-t pt-8">
             <h2 className="eyebrow">{t('details')}</h2>

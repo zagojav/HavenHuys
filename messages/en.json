@@ -2,7 +2,7 @@
   "site": {
     "name": "Haven Huis",
     "tagline": "Objects for a house that feels lived in.",
-    "description": "Haven Huis is a small home decor shop for the Netherlands: lighting, textiles, storage, tableware and quiet objects, each piece sourced individually and delivered in 15–30 business days."
+    "description": "Haven Huis is a small home decor shop delivering across the European Union: lighting, textiles, storage, tableware and quiet objects, each piece sourced individually and delivered in 15–30 business days."
   },
   "nav": {
     "shop": "Shop",
@@ -85,7 +85,7 @@
   },
   "products": {
     "title": "The collection",
-    "lead": "Twelve pieces, chosen slowly and sourced one order at a time.",
+    "lead": "Eleven pieces, chosen slowly and sourced one order at a time.",
     "metaDescription": "Browse the full Haven Huis collection: lighting, textiles, storage, tableware and decor objects, sourced individually and delivered in 15–30 business days.",
     "filterLabel": "Filter by category",
     "sortLabel": "Sort",
@@ -120,6 +120,12 @@
     "returns": "Returns",
     "returnsValue": "30 days, return label covered",
     "related": "You may also like",
+    "freeShipping": "Free shipping on orders over {threshold}",
+    "trust": {
+      "secure": "Secure checkout",
+      "returns": "30-day returns",
+      "shipping": "Ships across the EU"
+    },
     "gallery": {
       "label": "Product images",
       "thumbLabel": "Show image {index}",
@@ -146,7 +152,7 @@
     "metaDescription": "Review the pieces in your Haven Huis bag and complete your order.",
     "empty": {
       "title": "Your bag is empty.",
-      "body": "Nothing chosen yet. The collection is twelve pieces deep.",
+      "body": "Nothing chosen yet. The collection is eleven pieces deep.",
       "cta": "Browse the collection"
     },
     "item": "Item",
@@ -170,7 +176,7 @@
       "pay": "Go to secure checkout",
       "pending": "Opening checkout…",
       "error": "We couldn't open checkout. Please try again.",
-      "countries": "We deliver to the Netherlands for now.",
+      "countries": "We deliver anywhere in the European Union.",
       "help": "Questions before you pay?",
       "helpLink": "Talk to us"
     },
@@ -184,7 +190,7 @@
     "metaDescription": "Haven Huis is a small home decor shop run from Rotterdam, selling lighting, textiles and ceramics chosen for the way they age.",
     "lead": "Haven means refuge. Huis means house. We sell the things that turn one into the other.",
     "body1": "Haven Huis started in a flat in Rotterdam with a problem most people recognise: everything on offer was either disposable or unaffordable, and very little of it was interesting. So we started choosing pieces ourselves, one at a time, against a single question. Would we live with this?",
-    "body2": "We keep the range small on purpose. Twelve pieces means every one of them was argued over. We look at the material first, then the proportion, then how a piece will sit next to the things you already own. Anything that photographs well and lives badly is left out.",
+    "body2": "We keep the range small on purpose. Eleven pieces means every one of them was argued over. We look at the material first, then the proportion, then how a piece will sit next to the things you already own. Anything that photographs well and lives badly is left out.",
     "body3": "Nothing here is warehoused. Each piece is sourced and shipped on its own once you order it, which takes fifteen to thirty business days. That is slower than a shelf two hours away, and it is the reason the price is what it is. If a piece is not right, thirty days and a prepaid label will sort it out.",
     "imageAlt": "Neutral living room with layered textiles and woven baskets",
     "stats": {
@@ -226,7 +232,7 @@
       "hoursLabel": "Hours",
       "hours": "Monday to Friday, 09:00–17:00 CET",
       "warehouseLabel": "Operated from",
-      "warehouse": "Brazil, shipping to the Netherlands",
+      "warehouse": "Brazil, shipping across the European Union",
       "shippingNote": "Looking for delivery times or returns?",
       "shippingLink": "Read shipping & returns"
     },
@@ -234,15 +240,15 @@
   },
   "checkoutInfo": {
     "title": "Shipping & returns",
-    "metaDescription": "Haven Huis shipping times, delivery costs and the 30-day return policy. Every order is delivered in 15–30 business days.",
+    "metaDescription": "Haven Huis shipping times, delivery costs and the 30-day return policy. We deliver anywhere in the European Union, in 15–30 business days.",
     "lead": "Shipping time is 15–30 business days. Each item is sourced and shipped individually to ensure quality.",
     "shipping": {
       "title": "Shipping",
-      "body": "Your order goes to its maker the day it is placed. You'll get a tracking link as soon as the parcel is scanned, and a separate one for each piece in a multi-item order.",
+      "body": "Your order goes to its maker the day it is placed. You'll get a tracking link as soon as the parcel is scanned, and a separate one for each piece in a multi-item order. Every EU address is served from the same European warehouse, so the wait is the same whether you are in Utrecht or in Lisbon.",
       "rows": {
-        "nlLabel": "Netherlands",
-        "nlValue": "{min}–{max} business days · {price}, free over {threshold}",
-        "elsewhereLabel": "Everywhere else",
+        "euLabel": "European Union",
+        "euValue": "{min}–{max} business days · {price}, free over {threshold}",
+        "elsewhereLabel": "Outside the EU",
         "elsewhereValue": "Not shipping yet, write to us"
       }
     },
@@ -264,7 +270,7 @@
     },
     "payment": {
       "title": "Payment",
-      "body": "Payment runs through Stripe's secure checkout, and the whole bag is paid for in one go. Cards and Apple Pay are accepted today; iDEAL and the other Dutch methods follow."
+      "body": "Payment runs through Stripe's secure checkout, and the whole bag is paid for in one go. Prices are set in euros and cards and Apple Pay are accepted today; iDEAL, Bancontact and the other local European methods follow."
     },
     "cta": "Back to the collection"
   },
@@ -287,7 +293,7 @@
   },
   "cancelOrder": {
     "title": "Cancel your order",
-    "metaDescription": "Cancel a Haven Huis order in one step. Your statutory 14-day right of withdrawal and the form that starts the cancellation.",
+    "metaDescription": "Cancel a Haven Huis order in one step. Your statutory 14-day right of withdrawal, the same in every EU country, and the form that starts the cancellation.",
     "lead": "One form, one step. Fill it in and the cancellation is on its way — no phone call, and no reason needed.",
     "form": {
       "orderNumber": "Order number",
@@ -310,7 +316,7 @@
     },
     "rights": {
       "title": "Your right to cancel",
-      "body": "You have 14 days from the day the last piece in your order reaches you to withdraw from the purchase. You do not have to give a reason, and using the right costs you nothing. It is a statutory right under EU consumer law, not something this shop grants you.",
+      "body": "You have 14 days from the day the last piece in your order reaches you to withdraw from the purchase. You do not have to give a reason, and using the right costs you nothing. It is a statutory right under EU consumer law, which means it reaches you wherever in the Union you ordered from — it is not something this shop grants you.",
       "policy": "Haven Huis gives you 30 days rather than 14, so the shop policy is the more generous of the two and applies on top of the statutory right. Whichever you use, you are never worse off than the law leaves you.",
       "refund": "We refund everything you paid, standard delivery included, within 14 days of the cancellation. If a parcel has already reached you, send it back first — the return label is on us.",
       "link": "Read shipping & returns"
@@ -318,7 +324,7 @@
     "note": "This form runs in the browser only. Nothing is stored or sent until a mail service is connected."
   },
   "footer": {
-    "blurb": "Lighting, textiles and quiet objects for houses in the Netherlands and across the EU.",
+    "blurb": "Lighting, textiles and quiet objects for houses across the European Union.",
     "shopTitle": "Shop",
     "houseTitle": "Haven Huis",
     "helpTitle": "Help",
@@ -328,7 +334,7 @@
     "instagram": "Instagram",
     "pinterest": "Pinterest",
     "rights": "© {year} Haven Huis. All rights reserved.",
-    "operator": "Haven Huis is operated from Brazil, shipping to customers in the Netherlands · hello.havenhuys@gmail.com",
+    "operator": "Haven Huis is operated from Brazil, shipping to customers across the European Union · hello.havenhuys@gmail.com",
     "terms": "Terms",
     "privacy": "Privacy"
   },

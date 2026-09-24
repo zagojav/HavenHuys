@@ -3,7 +3,7 @@
  *
  * Photography is served directly from the CJ Dropshipping CDN. Both hostnames
  * (`cf.` and `oss-cf.`) are allow-listed in next.config.ts > images.remotePatterns.
- * Every URL below was fetched and checked. All twelve return 200 image/jpeg.
+ * Every URL below was fetched and checked. All eleven return 200 image/jpeg.
  *
  * Supplier links and cost prices live in data/suppliers.ts, which is server-only
  * and must never be imported from a client component.
@@ -58,6 +58,12 @@ export interface Product {
   name: Localized;
   tagline: Localized;
   description: Localized;
+  /**
+   * One line under the price on why it costs what it does. Claims about
+   * material stay within what `material` confirms; pieces without a confirmed
+   * material talk about design or value instead.
+   */
+  valueNote: Localized;
   category: Category;
   /** Stored in cents to keep money arithmetic exact. */
   priceCents: number;
@@ -91,6 +97,10 @@ export const products: Product[] = [
       en: 'A woven shade over a warm LED, on a base that holds the clock, the alarm and the charging ports. Touch the stem to step the light up or down. It clears the nightstand of the lamp, the charger and the clock radio that were all competing for it.',
       nl: 'Een geweven kap over een warme led, op een voet waarin de klok, de wekker en de oplaadpoorten zitten. Tik op de stang om het licht hoger of lager te zetten. Hij ruimt het nachtkastje op: de lamp, de lader en de wekkerradio vallen samen in één ding.',
     },
+    valueNote: {
+      en: 'One piece doing the work of a lamp, a clock and a charger.',
+      nl: 'Eén stuk dat het werk doet van een lamp, een klok en een lader.',
+    },
     category: 'lighting',
     priceCents: 6995,
     images: [
@@ -120,6 +130,10 @@ export const products: Product[] = [
     description: {
       en: 'A turned stem under a solid cap, dimmed by touching the wood instead of feeling for a switch in the dark. It charges over USB, so it works on a shelf with no socket behind it. The light stays low enough to read by without waking the room.',
       nl: 'Een gedraaide steel onder een massieve hoed, gedimd door het hout aan te raken in plaats van in het donker naar een schakelaar te tasten. Hij laadt via usb, dus hij werkt ook op een plank zonder stopcontact erachter. Het licht blijft laag genoeg om bij te lezen zonder de kamer wakker te maken.',
+    },
+    valueNote: {
+      en: 'Turned solid wood, which ages rather than wears out.',
+      nl: 'Gedraaid massief hout, dat mooi oud wordt in plaats van te slijten.',
     },
     category: 'lighting',
     priceCents: 4595,
@@ -157,6 +171,10 @@ export const products: Product[] = [
       en: 'A shallow dish ringed with concentric ridges, so the bulb at its centre throws rings of shadow instead of a flat glare. Made for a hallway or the side of a bed, where you want the wall lit and not the room.',
       nl: 'Een ondiepe schaal met concentrische ribbels, waardoor de lamp in het midden een ring van schaduw werpt in plaats van een vlakke gloed. Bedoeld voor een gang of naast het bed, waar je de muur wilt verlichten en niet de kamer.',
     },
+    valueNote: {
+      en: 'Shaped to direct the light, not just to hold the bulb.',
+      nl: 'Gevormd om het licht te sturen, niet alleen om de lamp te dragen.',
+    },
     category: 'lighting',
     priceCents: 9190,
     images: [
@@ -185,8 +203,12 @@ export const products: Product[] = [
       nl: 'Vier hoezen, één middag.',
     },
     description: {
-      en: 'Short-pile velvet with a row of small pom-poms along the seam. They come in fours, which is what it takes for a sofa to look finished rather than sampled. Covers only, hidden zip. Keep the inserts you already own.',
-      nl: 'Kortpolig fluweel met een rij kleine pompons langs de naad. Ze komen per vier, want dat is wat een bank nodig heeft om af te ogen in plaats van uitgeprobeerd. Alleen hoezen, met verborgen rits. De binnenkussens die je al hebt, blijven gewoon liggen.',
+      en: 'Short-pile velvet with a row of small pom-poms along the seam, in a warm cream that sits with a room rather than announcing itself. They come in fours, which is what it takes for a sofa to look finished rather than sampled. Covers only, hidden zip. Keep the inserts you already own.',
+      nl: 'Kortpolig fluweel met een rij kleine pompons langs de naad, in een warm crème dat zich voegt naar de kamer in plaats van de aandacht op te eisen. Ze komen per vier, want dat is wat een bank nodig heeft om af te ogen in plaats van uitgeprobeerd. Alleen hoezen, met verborgen rits. De binnenkussens die je al hebt, blijven gewoon liggen.',
+    },
+    valueNote: {
+      en: 'Priced for four covers, not one.',
+      nl: 'Geprijsd voor vier hoezen, niet voor één.',
     },
     category: 'textiles',
     priceCents: 5190,
@@ -214,6 +236,10 @@ export const products: Product[] = [
     description: {
       en: 'An open wavy knit that ends in a long fringe. Light enough to nap under, loose enough to drape without bulk. It is sized for the arm of a sofa, which is where it will actually live.',
       nl: 'Een open, golvende breisteek die uitloopt in lange franjes. Licht genoeg om onder weg te doezelen, soepel genoeg om zonder volume te draperen. Hij is op maat voor de armleuning van een bank, want daar ligt hij toch.',
+    },
+    valueNote: {
+      en: 'Knitted open and loose, so it drapes instead of bunching.',
+      nl: 'Open en los gebreid, zodat hij valt in plaats van propt.',
     },
     category: 'textiles',
     priceCents: 3390,
@@ -243,6 +269,10 @@ export const products: Product[] = [
       en: 'Flat-woven linen and cotton, finished with knotted tassels at both ends. Small enough for a bedside, a bathroom door, or the strip of floor in front of the sink. It washes and dries flat, which is the whole point of a rug this size.',
       nl: 'Plat geweven linnen en katoen, afgewerkt met geknoopte kwastjes aan beide uiteinden. Klein genoeg voor naast het bed, bij de badkamerdeur of voor de gootsteen. Hij wast en droogt vlak, en dat is bij een kleed van dit formaat het hele punt.',
     },
+    valueNote: {
+      en: 'Linen and cotton, flat-woven to go through the wash.',
+      nl: 'Linnen en katoen, plat geweven om door de was te kunnen.',
+    },
     category: 'textiles',
     priceCents: 2595,
     images: [
@@ -271,8 +301,12 @@ export const products: Product[] = [
       nl: 'Vier maten die in elkaar passen.',
     },
     description: {
-      en: 'Two-tone canvas with rope handles set through metal eyelets. The sides give, so they slump into a shelf rather than fighting it, and they sit inside each other when empty. Open top, no lid to lose.',
-      nl: 'Tweekleurig canvas met touwhandvatten door metalen ringen. De wanden geven mee, dus ze voegen zich naar een plank in plaats van ertegen te vechten, en leeg passen ze in elkaar. Open bovenkant, geen deksel om kwijt te raken.',
+      en: 'Two-tone canvas, natural beige over grey, with rope handles set through metal eyelets. The sides give, so they slump into a shelf rather than fighting it, and they sit inside each other when empty. Open top, no lid to lose.',
+      nl: 'Tweekleurig canvas, naturel beige boven grijs, met touwhandvatten door metalen ringen. De wanden geven mee, dus ze voegen zich naar een plank in plaats van ertegen te vechten, en leeg passen ze in elkaar. Open bovenkant, geen deksel om kwijt te raken.',
+    },
+    valueNote: {
+      en: 'Four baskets for one price, stored inside each other when empty.',
+      nl: 'Vier manden voor één prijs, leeg in elkaar opgeborgen.',
     },
     category: 'storage',
     priceCents: 3390,
@@ -302,6 +336,10 @@ export const products: Product[] = [
     description: {
       en: 'One length of solid wood that slides onto concealed steel rods, so what you see is a line on the wall rather than a fixture. It takes books, a small plant, and the things that otherwise pile up on the nearest flat surface.',
       nl: 'Eén stuk massief hout dat over verborgen stalen staven schuift, zodat je een lijn op de muur ziet en geen beslag. Hij draagt boeken, een kleine plant en de dingen die zich anders opstapelen op het eerste het beste vlakke oppervlak.',
+    },
+    valueNote: {
+      en: 'Solid wood on steel rods, built to outlast trend cycles.',
+      nl: 'Massief hout op stalen staven, gemaakt om trends te overleven.',
     },
     category: 'storage',
     priceCents: 1590,
@@ -346,6 +384,10 @@ export const products: Product[] = [
       en: 'Strips of pale and dark wood laid into a chevron across the base, framed by a raised rim. It is flat enough to work as a surface on a coffee table once the cups have gone, which is most of the time.',
       nl: 'Stroken licht en donker hout in een visgraatpatroon over de bodem, omlijst door een opstaande rand. Vlak genoeg om als ondergrond op de salontafel te blijven liggen zodra de kopjes weg zijn, en dat is het grootste deel van de tijd.',
     },
+    valueNote: {
+      en: 'Real wood inlay, laid strip by strip rather than printed on.',
+      nl: 'Echte houtinleg, strook voor strook gelegd in plaats van bedrukt.',
+    },
     category: 'tableware',
     priceCents: 5995,
     images: [
@@ -364,30 +406,10 @@ export const products: Product[] = [
   },
 
   // ---------------------------------------------------------- decor-objects
-  {
-    slug: 'matte-ceramic-vase-trio',
-    name: { en: 'Matte Ceramic Vase Trio', nl: 'Matte Keramische Vazen, Trio' },
-    tagline: { en: 'Three heights, one group.', nl: 'Drie hoogtes, één groep.' },
-    description: {
-      en: 'A tall bottle, a rounded oval and a low sphere, all in the same chalky matte glaze. They are made to stand together on a sill or a shelf. The necks are narrow, so one stem holds itself upright.',
-      nl: 'Een hoge fles, een ronde ovaal en een lage bol, alle drie in hetzelfde krijtachtige matte glazuur. Ze zijn gemaakt om samen op een vensterbank of plank te staan. De halzen zijn smal, dus één tak blijft vanzelf rechtop.',
-    },
-    category: 'decor-objects',
-    priceCents: 2390,
-    images: [
-      {
-        src: 'https://cf.cjdropshipping.com/203002/906377125639.jpg',
-        alt: {
-          en: 'Three matte ceramic vases in grey, dusty pink and black on marble beside a framed print',
-          nl: 'Drie matte keramische vazen in grijs, oudroze en zwart op marmer naast een ingelijste print',
-        },
-      },
-    ],
-    badge: 'bestseller',
-    bestseller: true,
-    material: { en: 'Ceramic, matte glaze', nl: 'Keramiek, mat glazuur' },
-    addedOn: '2026-09-10',
-  },
+  // `matte-ceramic-vase-trio` was withdrawn on 2026-09-22. The supplier line of
+  // €5.97 turned out to be per vase rather than per trio, which puts landed
+  // cost at €20.91 against a €23.90 retail — a ~12% margin — and the trio could
+  // not be shipped on the EU delivery promise the rest of the range is sold on.
   {
     slug: 'wood-slice-tealight-set',
     name: {
@@ -401,6 +423,10 @@ export const products: Product[] = [
     description: {
       en: 'Cut from a log and left with the bark on, each with a recess turned to take a standard tealight. Put them in a row down the middle of a table and the light sits low, across the cloth rather than in your eyes.',
       nl: 'Gezaagd uit een stam, met de schors er nog omheen, elk met een uitsparing op maat van een standaard waxinelichtje. Zet ze op een rij midden op tafel: het licht blijft laag en strijkt over het tafelkleed in plaats van in je ogen.',
+    },
+    valueNote: {
+      en: 'Cut from real logs, so no two slices are the same.',
+      nl: 'Gezaagd uit echte stammen, dus geen twee schijven zijn gelijk.',
     },
     category: 'decor-objects',
     // Set by hand, not derived. At its old 6.77x multiple the duty would have
@@ -437,6 +463,10 @@ export const products: Product[] = [
     description: {
       en: 'Two seated figures in matte black and brushed silver, each leaning into an open ring. They are scaled for a shelf or a sideboard, not a plinth, and they only work as a pair. Bought together, placed together.',
       nl: 'Twee zittende figuren in mat zwart en geborsteld zilver, elk leunend in een open ring. Ze zijn op maat voor een plank of dressoir, niet voor een sokkel, en ze werken alleen samen. Samen gekocht, samen geplaatst.',
+    },
+    valueNote: {
+      en: 'A matched pair, priced together because they only work together.',
+      nl: 'Een paar, samen geprijsd omdat ze alleen samen werken.',
     },
     category: 'decor-objects',
     priceCents: 3295,

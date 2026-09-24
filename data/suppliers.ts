@@ -45,16 +45,19 @@ export function landedCostCents(supplier: Supplier): number {
 
 /**
  * Retail prices in data/products.ts were re-derived from `landedCostCents` at
- * each product's existing multiple, except for these three. Their supplier
+ * each product's existing multiple, except for these two. Their supplier
  * quantities are still unconfirmed (see the notes below), so repricing them
  * would bake an unverified cost into the shop. They are currently priced off
  * the pre-duty cost and are carrying the €3 out of margin until the quantities
  * are confirmed.
+ *
+ * `matte-ceramic-vase-trio` was the third entry here until its quantity came
+ * back confirmed at one vase per line rather than three. That left a ~12%
+ * margin, so the piece was withdrawn from the catalogue rather than repriced.
  */
 export const PRICED_BEFORE_DUTY = [
   'nested-storage-basket-set',
   'solid-wood-floating-shelf',
-  'matte-ceramic-vase-trio',
 ] as const;
 
 export const SUPPLIERS: Record<string, Supplier> = {
@@ -82,7 +85,7 @@ export const SUPPLIERS: Record<string, Supplier> = {
       'https://cjdropshipping.com/product/wind-velvet-solid-color-cushion-cover-for-office-p-1380498548117868544.html',
     costCents: 1036,
     kitQuantity: 4,
-    note: 'Sold on the site as a set of 4. Order 4 × €2.59. Covers only, no inserts.',
+    note: 'Sold on the site as a set of 4. Order 4 × €2.59. Covers only, no inserts. IMPORTANT: order the cream colourway, which is what the product photo and copy sell — never the pale pink the listing defaults to.',
   },
   'chunky-knit-fringe-throw': {
     supplierUrl:
@@ -101,7 +104,7 @@ export const SUPPLIERS: Record<string, Supplier> = {
     supplierUrl:
       'https://cjdropshipping.com/product/dog-toy-basket-p-1400391358765731840.html',
     costCents: 836,
-    note: 'Confirm the €8.36 line covers all 4 baskets and not a single unit before the first order goes out.',
+    note: 'Confirm the €8.36 line covers all 4 baskets and not a single unit before the first order goes out. IMPORTANT: order the beige/grey two-tone colourway only — the other colourways on the listing are not what the site sells.',
   },
   'solid-wood-floating-shelf': {
     supplierUrl:
@@ -118,12 +121,6 @@ export const SUPPLIERS: Record<string, Supplier> = {
   },
 
   // ---------------------------------------------------------- decor-objects
-  'matte-ceramic-vase-trio': {
-    supplierUrl:
-      'https://cjdropshipping.com/product/ceramic-vase-p-6D47B47F-F5A8-4349-9324-147DFDDCF514.html',
-    costCents: 597,
-    note: 'Sold on the site as a trio. Confirm €5.97 is the set price and not the price of one vase.',
-  },
   'wood-slice-tealight-set': {
     supplierUrl:
       'https://cjdropshipping.com/product/simple-modern-pastoral-wood-candle-holder-p-1601765055845117952.html',

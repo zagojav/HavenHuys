@@ -2,7 +2,7 @@
   "site": {
     "name": "Haven Huis",
     "tagline": "Objecten voor een huis waarin geleefd wordt.",
-    "description": "Haven Huis is een kleine woondecoratiewinkel voor Nederland: verlichting, textiel, opberging, tafelgerei en stille objecten, per stuk ingekocht en geleverd in 15–30 werkdagen."
+    "description": "Haven Huis is een kleine woondecoratiewinkel die in de hele Europese Unie bezorgt: verlichting, textiel, opberging, tafelgerei en stille objecten, per stuk ingekocht en geleverd in 15–30 werkdagen."
   },
   "nav": {
     "shop": "Shop",
@@ -85,7 +85,7 @@
   },
   "products": {
     "title": "De collectie",
-    "lead": "Twaalf stukken, langzaam gekozen en per bestelling ingekocht.",
+    "lead": "Elf stukken, langzaam gekozen en per bestelling ingekocht.",
     "metaDescription": "Bekijk de volledige Haven Huis-collectie: verlichting, textiel, opberging, tafelgerei en decoratie, per stuk ingekocht en geleverd in 15–30 werkdagen.",
     "filterLabel": "Filter op categorie",
     "sortLabel": "Sorteren",
@@ -120,6 +120,12 @@
     "returns": "Retour",
     "returnsValue": "30 dagen, retourlabel vergoed",
     "related": "Misschien ook iets voor jou",
+    "freeShipping": "Gratis verzending vanaf {threshold}",
+    "trust": {
+      "secure": "Veilig afrekenen",
+      "returns": "30 dagen retour",
+      "shipping": "Levering in de hele EU"
+    },
     "gallery": {
       "label": "Productafbeeldingen",
       "thumbLabel": "Toon afbeelding {index}",
@@ -146,7 +152,7 @@
     "metaDescription": "Bekijk de stukken in je Haven Huis-tas en rond je bestelling af.",
     "empty": {
       "title": "Je tas is leeg.",
-      "body": "Nog niets gekozen. De collectie telt twaalf stukken.",
+      "body": "Nog niets gekozen. De collectie telt elf stukken.",
       "cta": "Bekijk de collectie"
     },
     "item": "Artikel",
@@ -170,7 +176,7 @@
       "pay": "Naar de beveiligde betaling",
       "pending": "Betaalpagina openen…",
       "error": "We konden de betaalpagina niet openen. Probeer het opnieuw.",
-      "countries": "We bezorgen voorlopig alleen in Nederland.",
+      "countries": "We bezorgen in de hele Europese Unie.",
       "help": "Vragen voordat je betaalt?",
       "helpLink": "Neem contact op"
     },
@@ -184,7 +190,7 @@
     "metaDescription": "Haven Huis is een kleine woondecoratiewinkel vanuit Rotterdam, met verlichting, textiel en keramiek, uitgekozen op hoe ze verouderen.",
     "lead": "Haven betekent toevlucht. Huis spreekt voor zich. Wij verkopen wat daarvoor nodig is.",
     "body1": "Haven Huis begon in een appartement in Rotterdam met een probleem dat de meeste mensen herkennen: alles wat er te koop was, was óf wegwerp óf onbetaalbaar, en maar weinig ervan was interessant. Dus zijn we zelf gaan kiezen, stuk voor stuk, met steeds dezelfde vraag. Zouden we hier zelf mee willen wonen?",
-    "body2": "We houden het assortiment bewust klein. Bij twaalf stukken is er over elk stuk nagedacht. We kijken eerst naar het materiaal, dan naar de verhoudingen, en dan naar hoe een stuk staat naast de dingen die je al hebt. Wat goed op de foto staat maar niet prettig woont, valt af.",
+    "body2": "We houden het assortiment bewust klein. Bij elf stukken is er over elk stuk nagedacht. We kijken eerst naar het materiaal, dan naar de verhoudingen, en dan naar hoe een stuk staat naast de dingen die je al hebt. Wat goed op de foto staat maar niet prettig woont, valt af.",
     "body3": "Er ligt hier niets in een magazijn. Elk stuk wordt apart ingekocht en verstuurd zodra je bestelt, en dat duurt vijftien tot dertig werkdagen. Dat is langzamer dan een stelling op twee uur afstand, en het is de reden dat de prijs is wat hij is. Past een stuk niet, dan lossen dertig dagen en een voorgefrankeerd label dat op.",
     "imageAlt": "Neutrale woonkamer met gelaagd textiel en gevlochten manden",
     "stats": {
@@ -226,7 +232,7 @@
       "hoursLabel": "Openingstijden",
       "hours": "Maandag tot vrijdag, 09:00–17:00 CET",
       "warehouseLabel": "Gerund vanuit",
-      "warehouse": "Brazilië, met verzending naar Nederland",
+      "warehouse": "Brazilië, met verzending naar de hele Europese Unie",
       "shippingNote": "Op zoek naar levertijden of retourvoorwaarden?",
       "shippingLink": "Lees verzending & retour"
     },
@@ -234,15 +240,15 @@
   },
   "checkoutInfo": {
     "title": "Verzending & retour",
-    "metaDescription": "Levertijden, verzendkosten en het retourbeleid van 30 dagen bij Haven Huis. Elke bestelling wordt geleverd in 15–30 werkdagen.",
+    "metaDescription": "Levertijden, verzendkosten en het retourbeleid van 30 dagen bij Haven Huis. We bezorgen in de hele Europese Unie, in 15–30 werkdagen.",
     "lead": "De levertijd is 15–30 werkdagen. Elk artikel wordt apart ingekocht en verstuurd, zodat we de kwaliteit kunnen nakijken.",
     "shipping": {
       "title": "Verzending",
-      "body": "Je bestelling gaat dezelfde dag naar de maker. Je ontvangt een track & trace-link zodra het pakket gescand is, en bij meerdere artikelen een aparte link per stuk.",
+      "body": "Je bestelling gaat dezelfde dag naar de maker. Je ontvangt een track & trace-link zodra het pakket gescand is, en bij meerdere artikelen een aparte link per stuk. Elk adres in de EU wordt vanuit hetzelfde Europese magazijn beleverd, dus de levertijd is dezelfde of je nu in Utrecht of in Lissabon woont.",
       "rows": {
-        "nlLabel": "Nederland",
-        "nlValue": "{min}–{max} werkdagen · {price}, gratis boven {threshold}",
-        "elsewhereLabel": "Overal elders",
+        "euLabel": "Europese Unie",
+        "euValue": "{min}–{max} werkdagen · {price}, gratis boven {threshold}",
+        "elsewhereLabel": "Buiten de EU",
         "elsewhereValue": "Nog geen verzending, mail ons"
       }
     },
@@ -264,7 +270,7 @@
     },
     "payment": {
       "title": "Betalen",
-      "body": "Betalen gaat via de beveiligde betaalpagina van Stripe, in één keer voor je hele tas. Creditcard en Apple Pay kunnen nu; iDEAL en de andere Nederlandse methodes volgen."
+      "body": "Betalen gaat via de beveiligde betaalpagina van Stripe, in één keer voor je hele tas. De prijzen staan in euro's en creditcard en Apple Pay kunnen nu; iDEAL, Bancontact en de andere lokale Europese methodes volgen."
     },
     "cta": "Terug naar de collectie"
   },
@@ -287,7 +293,7 @@
   },
   "cancelOrder": {
     "title": "Bestelling annuleren",
-    "metaDescription": "Annuleer een bestelling bij Haven Huis in één stap. Je wettelijke herroepingsrecht van 14 dagen en het formulier waarmee je annuleert.",
+    "metaDescription": "Annuleer een bestelling bij Haven Huis in één stap. Je wettelijke herroepingsrecht van 14 dagen, in elk EU-land hetzelfde, en het formulier waarmee je annuleert.",
     "lead": "Eén formulier, één stap. Vul het in en de annulering is onderweg — geen telefoontje, en een reden hoef je niet te geven.",
     "form": {
       "orderNumber": "Bestelnummer",
@@ -310,7 +316,7 @@
     },
     "rights": {
       "title": "Je herroepingsrecht",
-      "body": "Je hebt 14 dagen vanaf de dag waarop het laatste stuk uit je bestelling bij je aankomt om de koop te herroepen. Je hoeft geen reden op te geven en het gebruik van dat recht kost je niets. Het is een wettelijk recht uit het Europese consumentenrecht, niet iets wat deze winkel je toekent.",
+      "body": "Je hebt 14 dagen vanaf de dag waarop het laatste stuk uit je bestelling bij je aankomt om de koop te herroepen. Je hoeft geen reden op te geven en het gebruik van dat recht kost je niets. Het is een wettelijk recht uit het Europese consumentenrecht, en dus geldt het waar je in de Unie ook besteld hebt — het is niet iets wat deze winkel je toekent.",
       "policy": "Haven Huis geeft je 30 dagen in plaats van 14, dus het winkelbeleid is het ruimste van de twee en komt boven op het wettelijke recht. Wat je ook gebruikt, je bent nooit slechter af dan de wet je laat.",
       "refund": "We betalen alles terug wat je betaald hebt, inclusief de standaard verzendkosten, binnen 14 dagen na de annulering. Is een pakket al bij je bezorgd, stuur het dan eerst terug — het retourlabel is voor onze rekening.",
       "link": "Lees verzending & retour"
@@ -318,7 +324,7 @@
     "note": "Dit formulier werkt alleen in de browser. Er wordt niets opgeslagen of verstuurd totdat je een mailservice koppelt."
   },
   "footer": {
-    "blurb": "Verlichting, textiel en stille objecten voor huizen in Nederland en de rest van de EU.",
+    "blurb": "Verlichting, textiel en stille objecten voor huizen in de hele Europese Unie.",
     "shopTitle": "Shop",
     "houseTitle": "Haven Huis",
     "helpTitle": "Hulp",
@@ -328,7 +334,7 @@
     "instagram": "Instagram",
     "pinterest": "Pinterest",
     "rights": "© {year} Haven Huis. Alle rechten voorbehouden.",
-    "operator": "Haven Huis wordt vanuit Brazilië gerund en verzendt naar klanten in Nederland · hello.havenhuys@gmail.com",
+    "operator": "Haven Huis wordt vanuit Brazilië gerund en verzendt naar klanten in de hele Europese Unie · hello.havenhuys@gmail.com",
     "terms": "Voorwaarden",
     "privacy": "Privacy"
   },

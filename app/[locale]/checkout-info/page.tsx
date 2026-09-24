@@ -40,8 +40,8 @@ export default async function CheckoutInfoPage({ params }: PageProps) {
   // Session is built from, so this page cannot quote a rate we do not charge.
   const shippingRows = [
     {
-      label: t('shipping.rows.nlLabel'),
-      value: t('shipping.rows.nlValue', {
+      label: t('shipping.rows.euLabel'),
+      value: t('shipping.rows.euValue', {
         min: DELIVERY_DAYS.min,
         max: DELIVERY_DAYS.max,
         price: formatPrice(SHIPPING_FLAT_CENTS, locale as Locale),

@@ -1,6 +1,6 @@
 # Haven Huis
 
-A storefront for a small home-decor shop selling into the Netherlands.
+A storefront for a small home-decor shop selling into the European Union.
 Dropshipping model: no stock is held, and payment runs through Stripe's hosted
 Checkout.
 
@@ -56,10 +56,13 @@ Its replay guard is an in-process `Set` of event ids, which is enough for one
 instance and not enough for production: move it to a uniqueness constraint on
 the event id in the order table as soon as there is one.
 
-**Shipping terms live in `lib/shipping.ts`.** €4.95 flat, free from €50,
-Netherlands only, 15–30 business days. The Checkout Session, the bag summary
+**Shipping terms live in `lib/shipping.ts`.** €4.95 flat, free from €50, all
+27 EU member states, 15–30 business days. The Checkout Session, the bag summary
 and the shipping page all read those constants, so the quoted rate and the
-charged rate cannot drift.
+charged rate cannot drift. One rate covers the whole bloc because Checkout
+fixes `shipping_options` when the Session is created, before the customer has
+typed a country — differentiating by region means asking for the country first
+or moving to dynamic shipping rates, and `shippingCentsFor` says so.
 
 **Stripe Tax is not on yet.** The shop's Stripe account is registered in
 Brazil, where Stripe Tax is unavailable and iDEAL cannot be offered, so the
@@ -135,18 +138,18 @@ form composes its message in one place — `sendCancellation` in
 `components/CancelOrderForm.tsx` — so the Resend or Formspree call replaces a
 single function body.
 
-**`/cancel-order` is a compliance route, not a convenience one.** Dutch law
-requires a visible, one-click way to cancel an order, so the link sits in the
-footer of every page rather than behind a customer account. The page also
-states the statutory 14-day right of withdrawal in both languages. Keep the
-footer link if you rework the footer.
+**`/cancel-order` is a compliance route, not a convenience one.** EU consumer
+law requires a visible, one-click way to cancel an order, so the link sits in
+the footer of every page rather than behind a customer account. The page also
+states the statutory 14-day right of withdrawal, which is the same in every
+member state, in both languages. Keep the footer link if you rework the footer.
 
 **Retail prices are derived, not typed in.** Every `priceCents` in
 `data/products.ts` is its own multiple of `landedCostCents` from
 `data/suppliers.ts` — supplier cost plus the €3 EU import duty — rounded to end
 in ,90 or ,95. The duty is held in `IMPORT_DUTY_CENTS` rather than folded into
 `costCents`, because `costCents` is still what you actually pay the supplier.
-The three slugs in `PRICED_BEFORE_DUTY` have unconfirmed kit quantities and are
+The two slugs in `PRICED_BEFORE_DUTY` have unconfirmed kit quantities and are
 still on their pre-duty price; reprice them once the quantities are confirmed.
 
 ## Checks

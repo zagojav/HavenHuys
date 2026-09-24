@@ -74,6 +74,15 @@ export async function generateMetadata({
       images: [OG_IMAGE],
     },
     robots: { index: true, follow: true },
+    verification: {
+      // Google Search Console / Merchant Center verification. Rendered as
+      // <meta name="google-site-verification" content="…">.
+      google: 'uW13GIRxTUG7VXSw8ONvkG5859UgqdLpAay55mHdz6E',
+      // Pinterest site verification. Next renders this as
+      // <meta name="p:domain_verify" content="…"> on every page under the
+      // locale layout, which is where Pinterest looks for it.
+      other: { 'p:domain_verify': '22311f218e7bb8d3427fcb42ed94d439' },
+    },
   };
 }
 

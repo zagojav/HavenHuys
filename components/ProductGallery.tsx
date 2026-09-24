@@ -45,7 +45,9 @@ export function ProductGallery({ images, locale, productName }: ProductGalleryPr
   return (
     <section
       aria-label={productName}
-      className="flex flex-col gap-3 sm:flex-row-reverse sm:gap-4"
+      // `self-start` keeps the grid row from stretching the gallery to the
+      // height of the details column, which would override the 4:5 frame.
+      className="flex flex-col gap-3 self-start sm:flex-row-reverse sm:gap-4"
     >
       <div
         ref={frameRef}
@@ -55,7 +57,10 @@ export function ProductGallery({ images, locale, productName }: ProductGalleryPr
           setOrigin({ x: 50, y: 50 });
         }}
         onMouseMove={handleMove}
-        className="bg-surface relative aspect-[4/5] flex-1 overflow-hidden rounded-2xl"
+        // `w-full` rather than a bare `flex-1`: in the mobile column layout a
+        // zero flex basis would leave the frame's height to the aspect ratio's
+        // minimum size, which is fragile. The row layout still grows it.
+        className="bg-surface relative aspect-[4/5] w-full min-w-0 self-start overflow-hidden rounded-2xl sm:flex-1"
       >
         <AnimatePresence initial={false} mode="popLayout">
           <motion.div
